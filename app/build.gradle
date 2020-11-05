@@ -24,8 +24,8 @@ apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 30
-    buildFeatures {
-        dataBinding true
+    dataBinding {
+        enabled = true
     }
     defaultConfig {
         applicationId 'com.example.android.navigation'
@@ -60,7 +60,10 @@ dependencies {
     // Material Design
     implementation "com.google.android.material:material:$version_material"
 
-    // Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
-    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.1"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.3.1"
 }
